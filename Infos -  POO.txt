@@ -1,0 +1,63 @@
+PROGRAMMATION ORIENTE OBJET
+Un objet prototype / Une classe : Une classe est une entité regroupant des variables et des fonctions.
+ Chacune de ces fonctions aura accès aux variables de cette entité. Une classe est donc un regroupement
+logique de variables et de fonctions que tout objet issu de cette classe possédera. Sachez qu’en réalité,
+ on ne les appelle pas comme ça : il s’agit d’attributs (ou propriétés) et de méthodes. Un attribut désigne
+ une variable et une méthode désigne une fonction.
+-----------------
+Les propriétés : sont les caractères propres à un objet. Exemple : Une personne possède différents attributs
+ qui lui sont propres comme le nom, le prénom, la couleur des yeux, le sexe, la couleur des cheveux,
+ la taille… (ce sont en quelques sortes des variables dans l'objet)
+-----------------
+Les méthodes : sont les actions applicables à un objet. Exemple : un objet “ Personne” dispose des actions
+ suivantes : manger, dormir, boire, marcher, courir...
+----------------
+Instance/Instanciation : une instance est un objet, une représentation particulière d’une classe. Lorsque 
+l’on crée un objet, on réalise ce que l’on appelle une instance de la classe. C’est à dire que du moule, 
+on en extrait un nouvel objet qui dispose des ses attributs et de ses méthodes. L’objet ainsi créé aura pour
+ type le nom de la classe. Exemple : les objets Hugo, Romain, Nicolas, Fabrice sont des instances (objets)
+ de la classe Personne. Lorsque l’on instancie une classe, on utilise le mot-clé “new” suivant du nom de la
+ classe. Cette instruction appelle la méthode constructeur qui construit l’objet et le place en mémoire. 
+En common JS, via les prototypes, le constructeur est la fonction anonyme que l'on met en valeur de la
+ variable au tout début.
+-----------------
+Constructeur : Le constructeur est une méthode particulière. C’est elle qui est appelée implicitement à la 
+création de l’objet (instanciation). Le programmeur est libre de définir des paramètres obligatoires à passer
+ au constructeur ainsi qu’un groupe d’instructions à exécuter à l’instanciation de l'objet. 
+-----------------
+Encapsulation : L’un des gros avantages de la POO est que l’on peut masquer une partie du code à 
+l’utilisateur. (L’utilisateur est ici le développeur qui se servira de l'objet, pas celui qui chargera 
+la page depuis son navigateur). Le concepteur de l'objet a englobé dans celui-ci un code qui peut être 
+assez complexe et donc inutile voire dangereux de laisser l’utilisateur manipuler ces objets sans aucune 
+restriction. Ainsi, il est important d’interdire à l’utilisateur de modifier directement les attributs 
+d’un objet : l’utilisateur de la classe doit se contenter d’invoquer les méthodes en ignorant les attributs. 
+Il n’a pas à les trifouiller. Pour instaurer une telle contrainte, on dit que les attributs sont “privés”.
+------------------
+Composition : Une classe en utilise une autre. On parle de lien (agrégation), dit fort. La classe qui 
+en utilise une autre dépends de celle-ci et ne peut fonctionner sans.
+------------------
+
+On peut faire de l'héritage dans la POO
+Un classe peut hériter des propriétés et des méthodes d'une classe (parente), elle peut ainsi les 
+manipuler et les utiliser dans sa class
+
+----ATTENTION-----
+Une class parente peut avoir plusieurs class enfants
+Les classes enfant seront complètement indépendantes l'une de l'autre (aucun un lien familiale)
+Par contre une class enfant ne peut avoir qu'un seul parent
+On peut au final créer plusieurs niveaux d'héritage (voir schéma).
+L'intéret est que l'on peut aussi protéger une partie de notre code dans lequel on ne souhaite pas que 
+l'utilisateur est directement accès (encapsulation) voir demo Banque.
+
+dans la démo on a rajouté par la suite une encapsulation un peu plus travaillée.
+Dans la POO lorsqu'on utilise l'héritage on peut manipuler les propriétés du constructeur parent en glissant le mot clé super() dans le constructor enfant 
+le constructor enfant va récupérer et manipuler les propriétés du constructeur parent. Si on ne met aucun argument il va tous les récupérer sinon il manipulera uniquement ceux placés dans les argument de ce super
+on peut utiliser aussi le mot clé super dans nos méthodes lorsqu'on veut indiquer qu'on veut utiliser une méthode de la class parente exemple: super.describe() dans la démo Vehicle 
+-----------------------------
+LE CANVAS 
+Le canvas nous permet de créer des formes et des dessins vectoriel à partir de javascript.
+Il existe une balise canvas en html qui est traduite par le navigateur comme support de dessin (feuille) et possède plusieurs propriétés pour pouvoir dessiner dessus (voir demos)
+https://developer.mozilla.org/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
+https://developer.mozilla.org/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations
+
+Translater SVG to HTML5: https://demo.qunee.com/svg2canvas/
